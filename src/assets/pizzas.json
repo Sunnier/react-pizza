@@ -1,0 +1,68 @@
+[
+	{
+		"id": 6,
+		"img": "pizza6.jpg",
+		"title": "Garden Tomato Basil",
+		"description": "Fresh cherry tomatoes, basil leaves, and mozzarella cheese on tomato sauce.",
+		"types": [0, 1],
+		"sizes": [0, 1, 2],
+		"prices": [14, 19, 24],
+		"category": 3,
+		"rating": 4
+	},
+	{
+		"id": 5,
+		"img": "pizza5.jpg",
+		"title": "Mediterranean Veggie",
+		"description": "Loaded with black olives, spinach, red peppers, and feta cheese.",
+		"types": [0, 1],
+		"sizes": [0, 1, 2],
+		"prices": [15, 20, 25],
+		"category": 3,
+		"rating": 5
+	},
+	{
+		"id": 4,
+		"img": "pizza4.jpg",
+		"title": "Classic Pepperoni",
+		"description": "A classic favorite with plenty of pepperoni slices and extra cheese.",
+		"types": [0, 1],
+		"sizes": [0, 1, 2],
+		"prices": [13, 17, 22],
+		"category": 1,
+		"rating": 1
+	},
+	{
+		"id": 3,
+		"img": "pizza3.jpg",
+		"title": "Garlic Shrimp Scampi",
+		"description": "Topped with garlic shrimp, parsley, and a splash of lemon.",
+		"types": [0, 1],
+		"sizes": [0, 1, 2],
+		"prices": [18, 24, 29],
+		"category": 2,
+		"rating": 4
+	},
+	{
+		"id": 2,
+		"img": "pizza2.jpg",
+		"title": "Margherita",
+		"description": "Simple and delicious with tomato sauce, fresh white cheese, and basil.",
+		"types": [0, 1],
+		"sizes": [0, 1, 2],
+		"prices": [14, 18, 23],
+		"category": 3,
+		"rating": 2
+	},
+	{
+		"id": 1,
+		"img": "pizza1.jpg",
+		"title": "Italian Salami Supreme",
+		"description": "Salami, sliced red onions, and mushrooms on a crispy crust.",
+		"types": [0, 1],
+		"sizes": [0, 1, 2],
+		"prices": [16, 22, 27],
+		"category": 1,
+		"rating": 3
+	}
+]
