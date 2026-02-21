@@ -1,3 +1,11 @@
+import NotFoundBlock from "./NotFoundBlock"
+
 export default function NotFound() {
-	return <>404</>
+	return (
+		<>
+			<div className="root">
+				<NotFoundBlock />
+			</div>
+		</>
+	)
 }
