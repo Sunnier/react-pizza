@@ -1,4 +1,6 @@
-const ca = [
+// @ts-nocheck
+
+const categories = [
 	{
 		id: 0,
 		category: "All",
@@ -16,15 +18,19 @@ const ca = [
 		category: "Vegetarian",
 	},
 ]
-export default function Categories() {
+export default function Categories(props) {
+	const categoryItems = categories.map((item) => (
+		<button
+			key={item.id}
+			className={props.value == item.id ? "active" : ""}
+			onClick={() => props.onClickCategory(item.id)}>
+			{item.category}
+		</button>
+	))
 	return (
 		<div className="content-wide selection">
 			<div className="content">
-				<div className="categories">
-					<button className="active">All</button>
-					<button>Meat</button>
-					<button>Meat</button>
-				</div>
+				<div className="categories">{categoryItems}</div>
 				<div className="sort">
 					<img src="./img/filter.png" />
 					Sort by:

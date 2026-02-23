@@ -2,20 +2,19 @@
 
 function Sort({ value, onChangeSort }) {
 	const sortList = [
-		{ name: "Popularity", property: "rating" },
-		{ name: "Price", property: "price" },
-		{ name: "Title", property: "title" },
+		{ id: 1, name: "Popularity", property: "rating" },
+		{ id: 2, name: "Price", property: "price" },
+		{ id: 3, name: "Title", property: "title" },
 	]
-
-	const selectSort = (e) => {
-		const selection = e.target.value
-		const selectedSort = sortList.find((item) => item.property == selection)
-		onChangeSort(selectedSort)
-	}
+	// const selectSort = (e) => {
+	// 	const selection = e.target.value
+	// 	const selectedSort = sortList.find((item) => item.property == selection)
+	// 	onChangeSort(selectedSort)
+	// }
+	const selectSort = (e) => sortList.find((item) => item.name == e.target.value)
 	return (
 		<div className="sort">
 			<div className="sort__label">
-				{/* Decorative SVG Icon */}
 				<svg
 					width="10"
 					height="6"
@@ -27,12 +26,13 @@ function Sort({ value, onChangeSort }) {
 						fill="#2C2C2C"
 					/>
 				</svg>
-				<b>Сортировка по:</b>
+				<b>Sort by:</b>
+
 				<span className="native-select-wrapper">
-					<select value={value.property} onChange={selectSort}>
-						{sortList.map((obj) => (
-							<option key={obj.property} value={obj.property}>
-								{obj.name}
+					<select value={value.name} onChange={(e) => onChangeSort(selectSort(e))}>
+						{sortList.map((item, index) => (
+							<option key={index} value={item.name}>
+								{item.name}
 							</option>
 						))}
 					</select>

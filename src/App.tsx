@@ -9,7 +9,7 @@ import Pizza from "./components/Pizza"
 import Catergories from "./components/Categories"
 import Sort from "./components/Sort"
 
-import { Routes, Route } from "react-router-dom"
+import { Outlet } from "react-router"
 import Home from "./components/Home"
 import NotFound from "./components/NotFound"
 import Cart from "./components/Cart"
@@ -20,11 +20,7 @@ function App() {
 	return (
 		<>
 			<Header />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="*" element={<NotFound />} />
-				<Route path="/cart" element={<Cart />} />
-			</Routes>
+			<Outlet />
 		</>
 	)
 }
