@@ -16,7 +16,7 @@ const emptyPizzas = new Array(6)
 
 export default function Home() {
 	const [isLoading, setIsLoading] = useState(true)
-	const [activeCategory, setActiveCategory] = useState(1)
+	const [activeCategory, setActiveCategory] = useState(0)
 	const [activeSort, setActiveSort] = useState({
 		name: "Popularity",
 		property: "rating",
@@ -43,11 +43,11 @@ export default function Home() {
 	return (
 		<>
 			<Hero />
-			<Sort value={activeSort} onChangeSort={(id) => setActiveSort(id)} />
 			<Catergories
 				value={activeCategory}
 				onClickCategory={(id) => setActiveCategory(id)}
 			/>
+			<Sort value={activeSort} onChangeSort={(id) => setActiveSort(id)} />
 			<div className="content">
 				<h3>All Pizzas</h3>
 				<h4>Explore our curated selection of delicious handmade options.</h4>

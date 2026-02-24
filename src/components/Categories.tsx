@@ -28,16 +28,14 @@ export default function Categories(props) {
 		</button>
 	))
 	return (
-		<div className="content-wide selection">
-			<div className="content">
-				<div className="categories">{categoryItems}</div>
-				<div className="sort">
-					<img src="./img/filter.png" />
-					Sort by:
-					<select>
-						<option>Popularity</option>
-					</select>
-				</div>
+		<div className="content selection">
+			<div className="categories">{categoryItems}</div>
+			<div className="sort">
+				<img src="./img/filter.png" />
+				Sort by:
+				<select>
+					<option>Popularity</option>
+				</select>
 			</div>
 		</div>
 	)
