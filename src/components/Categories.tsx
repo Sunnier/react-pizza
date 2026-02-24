@@ -3,7 +3,7 @@
 const categories = [
 	{
 		id: 0,
-		category: "All",
+		category: "All Pizzas",
 	},
 	{
 		id: 1,
@@ -27,16 +27,5 @@ export default function Categories(props) {
 			{item.category}
 		</button>
 	))
-	return (
-		<div className="content selection">
-			<div className="categories">{categoryItems}</div>
-			<div className="sort">
-				<img src="./img/filter.png" />
-				Sort by:
-				<select>
-					<option>Popularity</option>
-				</select>
-			</div>
-		</div>
-	)
+	return <div className="categories">{categoryItems}</div>
 }

@@ -43,11 +43,13 @@ export default function Home() {
 	return (
 		<>
 			<Hero />
-			<Catergories
-				value={activeCategory}
-				onClickCategory={(id) => setActiveCategory(id)}
-			/>
-			<Sort value={activeSort} onChangeSort={(id) => setActiveSort(id)} />
+			<div class="content selection">
+				<Catergories
+					value={activeCategory}
+					onClickCategory={(id) => setActiveCategory(id)}
+				/>
+				<Sort value={activeSort} onChangeSort={(id) => setActiveSort(id)} />
+			</div>
 			<div className="content">
 				<h3>All Pizzas</h3>
 				<h4>Explore our curated selection of delicious handmade options.</h4>

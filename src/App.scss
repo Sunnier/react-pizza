@@ -35,6 +35,12 @@ header {
 	&.content {
 		flex-direction: row;
 	}
+	a {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		text-decoration: none;
+	}
 	img {
 		width: 36px;
 		height: 36px;
@@ -132,7 +138,7 @@ button {
 }
 .selection {
 	border-bottom: 1px solid #e3e1de;
-	.content {
+	&.content {
 		align-items: stretch;
 		padding-top: 20px;
 		padding-bottom: 20px;
@@ -151,6 +157,7 @@ button {
 		font-weight: 700;
 		border-left: 1px solid #e3e1de;
 		padding-left: 40px;
+		min-width: 200px;
 		img {
 			height: 14px;
 			margin: 1px 10px 0 0;
@@ -270,11 +277,8 @@ h4 {
 }
 
 .native-select-wrapper select {
-	/* Remove default ugly browser arrow and borders */
 	appearance: none;
 	-webkit-appearance: none;
-
-	/* Make it invisible but clickable */
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -285,10 +289,9 @@ h4 {
 	z-index: 10; /* Ensures it sits on top */
 }
 
-/* This is the text the user actually sees */
 .current-value {
 	color: #fe5f1e;
-	border-bottom: 1px dashed #fe5f1e;
+	//border-bottom: 1px dashed #fe5f1e;
 	cursor: pointer;
 }
 
