@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, createContext } from "react"
 import reactLogo from "./assets/react.svg"
 import viteLogo from "/vite.svg"
 import "./App.scss"
@@ -14,13 +14,15 @@ import Home from "./components/Home"
 import NotFound from "./components/NotFound"
 import Cart from "./components/Cart"
 
+export const SearchContext = createContext("")
 function App() {
-	const [count, setCount] = useState(0)
-
+	const [searchValue, setSearchValue] = useState("")
 	return (
 		<>
-			<Header />
-			<Outlet />
+			<SearchContext.Provider value={{ searchValue, setSearchValue }}>
+				<Header />
+				<Outlet />
+			</SearchContext.Provider>
 		</>
 	)
 }

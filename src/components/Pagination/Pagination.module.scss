@@ -1,0 +1,37 @@
+.pages {
+	display: flex;
+	justify-content: center;
+	margin: 30px 0;
+	$base-padding: 8px;
+	button {
+		border: 1px solid $orange-color;
+		border-radius: 50%;
+		color: $orange-color;
+		font-size: 1rem;
+		width: 1rem;
+		height: 1rem;
+		margin: 0 2px;
+		transition:
+			background-color 0.15s ease-in-out,
+			color 0.15s ease-in-out;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: $base-padding;
+		box-sizing: content-box;
+		background-color: rgba(255, 255, 255, 0.4);
+
+		&:hover:not(:disabled),
+		&.active {
+			background-color: $orange-color;
+			color: white;
+		}
+		&:disabled {
+			visibility: hidden;
+		}
+		&[data-content^="1"] {
+			padding-right: calc($base-padding + 1px);
+			padding-left: calc($base-padding - 1px);
+		}
+	}
+}

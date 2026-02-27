@@ -8,6 +8,12 @@
 		"strict": false,
 		"noImplicitAny": false,
 		"allowJs": true,
-		"checkJs": false
+		"checkJs": false,
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["src/*"],
+			"@assets/*": ["src/assets/*"],
+			"@components/*": ["src/components/*"]
+		}
 	}
 }
